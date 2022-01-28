@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="paycaps_acquirer_button">
+            <div>
+                <input type='hidden' name='data_set' t-att-data-action-url="tx_url" data-remove-me=""/>
+                <input type='hidden' name='APP_ID' t-att-value='APP_ID'/><br></br>
+                <input type='hidden' name='MERCHANTNAME' t-att-value="MERCHANTNAME"/><br></br>
+                <input type='hidden' name='ORDER_ID' t-att-value="ORDER_ID"/><br></br>
+                <input type='hidden' name='AMOUNT' t-att-value="AMOUNT"/><br></br>
+                <input type='hidden' name='TXNTYPE' t-att-value="TXNTYPE"/><br></br>
+              <!--   <input type='hidden' name='MERCHANT_PAYMENT_TYPE' t-att-value="MERCHANT_PAYMENT_TYPE"/><br></br> -->
+                <input type='hidden' name='CUST_NAME' t-att-value="CUST_NAME"/><br></br>
+                <input type='hidden' name='CUST_STREET_ADDRESS1' t-att-value="CUST_STREET_ADDRESS1"/><br></br>
+                <input type='hidden' name='CUST_ZIP' t-att-value='CUST_ZIP'/><br></br>
+                <input type='hidden' name='CUST_PHONE' t-att-value="CUST_PHONE"/><br></br>
+                <input type='hidden' name='CUST_EMAIL' t-att-value='CUST_EMAIL'/><br></br>
+                <input type='hidden' name='PRODUCT_DESC' t-att-value="PRODUCT_DESC"/><br></br>
+                <input type='hidden' name='CURRENCY_CODE' t-att-value='CURRENCY_CODE'/><br></br>
+                <input type='hidden' name='RETURN_URL' t-att-value="RETURN_URL"/><br></br>
+                <input type='hidden' name='HASH' t-att-value='HASH'/><br></br>
+                <button type="submit" width="100px" t-att-class="submit_class">
+                    <span t-if="submit_txt"><t t-esc="submit_txt"/> <span class="fa fa-long-arrow-right"/></span>
+                </button>
+            </div>
+        </template>
+    </data>
+</odoo>
