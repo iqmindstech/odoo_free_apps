@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_paycaps" model="payment.acquirer">
+            <field name="name">Paycaps</field>
+            <field name="provider">paycaps</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="payment_paycaps.paycaps_acquirer_button"/>
+            <field name="state">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the Payfort website after clicking on the payment button.</p>]]></field>
+            <field name="app_id">1225210520155951</field>
+            <field name="secret_key">6712315b5e6a4d12</field>
+        </record>
+    </data>
+</odoo>
