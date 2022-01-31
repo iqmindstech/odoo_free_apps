@@ -1,0 +1,271 @@
+<odoo>
+  <data>
+    <record id="iqminds_dashboard__form_view" model="ir.ui.view">
+            <field name="name">iqminds.dashboard.form.view</field>
+            <field name="model">iqminds.dashboard</field>
+            <field name="arch" type="xml">
+                <form create='false' edit='false'>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <p class="text-color display-6">
+                                                <span>Sale Order No.:</span>
+                                                <field name='sale_order_number'/>
+                                            </p>
+                                            <p class="text-color display-6">
+                                                <span>Invoice Number:</span>
+                                                <field name='invoice_number'/>
+                                            </p>
+                                            <p class="text-color display-6">
+                                                <span>Customer Name:</span>
+                                                <field name='customer_name'/>
+                                            </p>
+                                            <p class="text-color display-6">
+                                                <span style='padding-left:30px'>
+                                                    <button class="oe_button_box12" name='reset_fields' type='object'
+                                                            icon="fa-refresh">
+                                                        <span>Reset Fields</span>
+                                                    </button>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                        <div class="row col-xs-12 o_box">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <p>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'today_sale_order':True}" type='object'>
+                                                    <span>
+                                                        <field name='today_sale_order' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Sale Order
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'today_invoice':True}" type='object'>
+                                                    <span>
+                                                        <field name='today_invoice' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Invoice
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='today_payment_received' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Payment Received
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='today_delivery' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Delivery
+                                                </button>
+                                            </p>
+                                            <p>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='today_purchase_order' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Purchase
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='today_bill' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Bill
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='today_bill_payment' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Bills Payment
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='today_receipt' readonly='1'/>
+                                                    </span>
+                                                    <br/>Today Receipt
+                                                </button>
+                                            </p>
+                                            <p>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_sale_order':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_sale_order' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Sale
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_invoice':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_invoice' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Invoice
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_bill':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_bill' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Bills
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_delivery':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_delivery' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Delivery
+                                                </button>
+                                            </p>
+                                            <p>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_purchase_order':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_purchase' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Purchase
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='total_payment_customer' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Customer Payment
+                                                </button>
+                                                <button class="oe_button_box123">
+                                                    <span>
+                                                        <field name='total_bill_payment' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Bills Payment
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_receipt':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_receipts' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Receipts
+                                                </button>
+                                            </p>
+                                            <p>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_product_template':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_products' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Products
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_product_available':True}" type='object'>
+                                                    <span>
+                                                        <field name='product_available' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Products Available
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_customers':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_customers' widget="res_partner_many2one" context="{'res_partner_search_mode': 'customer'}" readonly='1'/>
+                                                    </span>
+                                                    <br/>Total  Customers
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_vendors':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_vendors' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Vendors
+                                                </button>
+                                            </p>
+                                            <p>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_employees':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_employees' readonly='1'/>
+                                                    </span>
+                                                    <br/>Employees List
+                                                </button>
+                                                <button class="oe_button_box123" name='action_view_data'
+                                                        context="{'total_expenses':True}" type='object'>
+                                                    <span>
+                                                        <field name='total_expenses' readonly='1'/>
+                                                    </span>
+                                                    <br/>Total Expenses
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xs-12 o_box" style="padding-top:1px;">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="card">
+                                <div>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <notebook>
+                                                <page string='Search Data'>
+                                                    <div class='ScrollStyle'>
+                                                        <field name='search_line_ids'
+                                                               nolabel="1">
+                                                            <!--<tree create="false">
+                                                                <field name='name'/>
+                                                                <field name="create_date"/>
+                                                                <field name="excepted_date"/>
+                                                                <field name="partner_id"/>
+                                                                <field name="user_id"/>
+                                                                <field name="amount_total"/>
+                                                                <field name="state"/>
+                                                            </tree>-->
+                                                        </field>
+                                                        <field name='search_line_ids1'
+                                                               nolabel="1">
+                                                        </field>
+                                                        <field name='search_line_ids2'
+                                                               nolabel="1">
+                                                        </field>
+                                                    </div>
+                                                </page>
+                                            </notebook>
+                                            <p class="text-light"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+    <record id="filter_iqminds_dashboard_action" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">iqminds.dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+    </record>
+
+        <menuitem
+                id="iqminds_main_menu"
+                name="Dashboard"
+                sequence="75"/>
+
+        <menuitem id="menu_dashboard_filter"
+                  name="IQMinds Dashboard"
+                  parent="iqminds_main_menu"
+                  action="filter_iqminds_dashboard_action"
+                  sequence='1'
+        />
+  </data>
+</odoo>
