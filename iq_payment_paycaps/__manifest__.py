@@ -37,6 +37,6 @@
         
 
     ],
-    'images': ['static/description/img/module.png']
+    'images': ['static/description/img/module.jpg']
 
 }
