@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- to add css file in xml file -->
+    <template id="assets_backend" inherit_id="web.assets_backend">
+         <xpath expr="." position="inside">
+             <link rel="stylesheet" href="/iqmind_dashboard/static/src/css/base_iq.css" type="text/css"/>
+         </xpath>
+    </template>
+</odoo>
